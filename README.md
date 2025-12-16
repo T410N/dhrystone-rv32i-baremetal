@@ -47,7 +47,7 @@ sudo apt-get install -y \
 
 ```bash
 cd ~/riscv-gnu-toolchain
-./configure --preifx=$HOME/riscv32i-elf --target=riscv32-unknown-elf --with-arch=rv32i --with-abi=ilp32
+./configure --prefix=$HOME/riscv32i-elf --target=riscv32-unknown-elf --with-arch=rv32i --with-abi=ilp32
 ```
 
 `riscv32i-elf` is the directory where toolchain is built. You can change this directory if needed.  
