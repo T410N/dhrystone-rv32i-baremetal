@@ -10,10 +10,13 @@
 - The main contents will be written in README.md.
 - The files that repository provides will be the 'ready to takeoff' state Dhrystone 2.1 for any RV32I bare-metal processor  
   (should support UART TX, MMIO.)
+- For performance evaluation, your processor needs **Zicsr** extension with supporting `mcycle(h)`, `minstret(h)` CSR.
 
 ## Target Processor
 
-Target processor is [basic_RV32s](https://github.com/RISC-KC/basic_rv32s)' **46F5SP_MMIO_SoC**, which is based on **RV32I46F_5SP** core design.  
+Target processor is [basic_RV32s](https://github.com/RISC-KC/basic_rv32s)' **46F5SP_MMIO_SoC**, which is based on **RV32I46F_5SP** core design.   
+(RV32I_Zicsr with 46 Instructions support, 5-Stage Pipelined In-order processor)   
+<sup>RV32I except fence, fence.tso, pause = 39 instructions for RV32I, 6 instructions for Zicsr, 1 instruction from privileged architecture: mret </sup>   
 The processor's Memory map is same as following.
 
 - IMEM(ROM) : 0x0000_0000, 64KB (0:16383)
