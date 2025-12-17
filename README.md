@@ -115,8 +115,13 @@ make
 And if you want to convert the output `dhrystone.bin` to `.mem`, use bin2mem.py.
 
 ```bash
-./bin2mem.py dhrystone.bin dhrystone.mem
+chmod +x bin2mem.py
+./bin2mem.py dhrystone.bin dhrystone.mem   
 ```
+or
+```bash
+python3 bin2mem.py dhrystone.bin dhrystone.mem  
+```   
 
 ## Dhrystone 2.1 results
 
